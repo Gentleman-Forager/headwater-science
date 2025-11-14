@@ -1,70 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Headwater Science</title>
 
-<!-- Fonts -->
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 /* GLOBAL ------------------------------------------------------------ */
-
 body {
   margin: 0;
   padding: 0;
-  background: #ffffff;
+  background: #F5F5EF;
   font-family: 'Montserrat', sans-serif;
   color: #0a2a18;
   line-height: 1.65;
 }
 
-/* Typography */
 h1, h2, h3 {
   font-weight: 700;
   color: #0a2a18;
   margin-bottom: 14px;
 }
 
-h1 { font-size: 40px; letter-spacing: .5px; }
-h2 { font-size: 30px; margin-top: 45px; }
-h3 { font-size: 24px; margin-top: 30px; }
+h1 { font-size: 44px; letter-spacing: .3px; }
+h2 { font-size: 34px; margin-top: 60px; }
+h3 { font-size: 26px; margin-top: 30px; }
 
 p, li {
-  font-size: 18px;
+  font-size: 19px;
   color: #0a2a18;
 }
 
-/* Layout */
+ul {
+  margin-top: 10px;
+  padding-left: 24px;
+}
+
+/* CONTAINER --------------------------------------------------------- */
 .section {
-  max-width: 1050px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 70px 26px;
+  padding: 70px 40px;
 }
 
-.card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 32px 36px;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
-  margin: 40px 0;
-}
-
-.full-image {
+/* HERO -------------------------------------------------------------- */
+.hero-image {
   width: 100%;
+  height: auto;
+  display: block;
   border-radius: 0;
-  margin: 0;
 }
 
+.hero-text-block {
+  text-align: center;
+  padding: 60px 40px 20px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.hero-text-block p {
+  font-size: 20px;
+  opacity: 0.85;
+  margin-top: 12px;
+}
+
+/* IMAGES ------------------------------------------------------------ */
 .round-image {
   width: 100%;
-  max-width: 780px;
-  border-radius: 18px;
+  max-width: 900px;
+  border-radius: 22px;
   display: block;
-  margin: 40px auto;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  margin: 60px auto;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+}
+
+.feature-image {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 22px;
+  display: block;
+  margin: 70px auto;
+  box-shadow: 0 10px 32px rgba(0,0,0,0.18);
+}
+
+/* CARD SECTIONS ----------------------------------------------------- */
+.card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 48px 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+  margin-top: 70px;
 }
 
 .divider {
@@ -72,43 +101,16 @@ p, li {
   height: 4px;
   background: #d4c08a;
   border-radius: 2px;
-  margin: 28px 0;
-}
-
-/* HERO -------------------------------------------------------------- */
-
-.hero-wrapper {
-  width: 100%;
-  overflow: hidden;
-}
-
-.hero-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.hero-text-block {
-  text-align: center;
-  padding: 60px 26px 40px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.hero-text-block p {
-  font-size: 19px;
-  opacity: 0.85;
-  margin-top: 10px;
+  margin: 28px 0 30px;
 }
 
 /* FOOTER ------------------------------------------------------------ */
-
 .footer {
   background: #0a2a18;
   color: #ffffff;
   text-align: center;
   padding: 55px 26px;
-  margin-top: 90px;
+  margin-top: 120px;
   font-size: 16px;
 }
 
@@ -116,35 +118,32 @@ p, li {
 </head>
 <body>
 
-<!-- HERO IMAGE -->
-<div class="hero-wrapper">
-  <img src="https://static.wixstatic.com/media/7549c3_2ef7786cf31942fba262b7df4f288c32~mv2.png"
-       alt="Headwater Hero"
-       class="hero-image">
-</div>
+<!-- HERO ------------------------------------------------------------ -->
+<img src="https://static.wixstatic.com/media/7549c3_2ef7786cf31942fba262b7df4f288c32~mv2.png"
+     class="hero-image"
+     alt="Headwater Forest Hero">
 
-<!-- HERO TEXT -->
 <div class="hero-text-block">
   <h1>Headwater Science</h1>
-  <p>Where nature’s intelligence meets performance-focused nutrition. No stimulants, no spikes — just clarity, steady energy, and long-term cognitive support.</p>
+  <p>Where nature’s intelligence meets performance-focused nutrition — steady clarity, balanced energy, and long-term cognitive support without stimulants.</p>
 </div>
 
-<!-- SECTION: INTRO -->
+<!-- INTRO ----------------------------------------------------------- -->
 <div class="section">
 
   <p>
-    Headwater was built on a simple belief: the brain and body perform best when supported consistently—not shocked into temporary alertness. Instead of caffeine, synthetic stimulants, or artificial energy, we rely on clinically studied mushroom extracts and natural compounds that support the nervous system, cellular health, and mental endurance over time.
+    Headwater was built on a simple belief: the brain and body perform best when supported consistently — not shocked into temporary alertness. Instead of caffeine, synthetic stimulants, or artificial energy, we rely on clinically studied mushroom extracts and natural compounds that support the nervous system, cellular health, and mental endurance over time.
   </p>
 
   <p><strong>This is nutrition for your brain and body. Not a jolt. Not a crash. Just clarity and resilience.</strong></p>
 
   <img src="https://static.wixstatic.com/media/7549c3_3dbb1a36d7f34a039d4f288e7b53f75c~mv2.png"
-       class="round-image"
+       class="feature-image"
        alt="Headwater Cans">
 
 </div>
 
-<!-- WHY MUSHROOMS -->
+<!-- WHY MUSHROOMS --------------------------------------------------- -->
 <div class="section">
   <h2>Why Mushrooms?</h2>
   <div class="divider"></div>
@@ -169,14 +168,14 @@ p, li {
 
   <img src="https://static.wixstatic.com/media/7549c3_f931deabeeda465aab6bdaa8465b60a6~mv2.jpg"
        class="round-image"
-       alt="Lion's Mane Mushroom">
+       alt="Lion's Mane mushroom">
 
   <img src="https://static.wixstatic.com/media/7549c3_2d30b7735c5048a6a2c1b5e76b5ad266~mv2.jpg"
        class="round-image"
-       alt="Chaga Mushroom">
+       alt="Chaga mushroom">
 </div>
 
-<!-- FRUITING BODY -->
+<!-- FRUITING BODY --------------------------------------------------- -->
 <div class="section card">
   <h2>Fruiting-Body Extracts Only</h2>
   <div class="divider"></div>
@@ -198,7 +197,7 @@ p, li {
   <p>This ensures every can provides meaningful, consistent functional support — not trace amounts disguised by clever labeling.</p>
 </div>
 
-<!-- EXTRACTION -->
+<!-- EXTRACTION ------------------------------------------------------ -->
 <div class="section card">
   <h2>Extraction That Honors Potency</h2>
   <div class="divider"></div>
@@ -214,10 +213,10 @@ p, li {
 
   <img src="https://static.wixstatic.com/media/7549c3_f1a6ee5e9bfa4015bb545487368cad11~mv2.png"
        class="round-image"
-       alt="Scientific Glass">
+       alt="Scientific Extraction">
 </div>
 
-<!-- INGREDIENT INTEGRITY -->
+<!-- INGREDIENT INTEGRITY -------------------------------------------- -->
 <div class="section card">
   <h2>Ingredient Integrity</h2>
   <div class="divider"></div>
@@ -246,7 +245,7 @@ p, li {
   </ul>
 </div>
 
-<!-- FOOTER -->
+<!-- FOOTER ---------------------------------------------------------- -->
 <div class="footer">
   © Gentleman Forager — Headwater Science
 </div>
