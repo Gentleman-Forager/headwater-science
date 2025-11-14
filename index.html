@@ -1,161 +1,319 @@
-<div style="font-family: 'Montserrat', Arial, sans-serif; color:#1a1a1a; line-height:1.6;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
 
-    <!-- HERO -->
-    <div style="background:#093028; color:white; padding:80px 20px; text-align:center;">
-        <h1 style="font-size:48px; font-weight:700; margin-bottom:20px;">Headwater Science</h1>
-        <p style="font-size:20px; max-width:760px; margin:0 auto; opacity:0.9;">
-            Where Nature Meets Performance Science
+    body {
+        margin:0;
+        padding:0;
+        font-family: 'Montserrat', Arial, sans-serif;
+        color:#333;
+        line-height:1.7;
+        background:#ffffff;
+    }
+
+    h1, h2 {
+        font-weight:700;
+        color:#0E4F44;
+    }
+
+    h1 {
+        font-size:48px;
+        margin-bottom:10px;
+    }
+
+    h2 {
+        font-size:34px;
+        margin-bottom:20px;
+        position:relative;
+    }
+
+    h2:before {
+        content:"";
+        position:absolute;
+        bottom:-8px;
+        left:0;
+        width:60px;
+        height:4px;
+        background:#B6C7BD;
+        border-radius:4px;
+    }
+
+    .section {
+        max-width:900px;
+        margin:70px auto;
+        padding:0 20px;
+    }
+
+    .light-bg {
+        background:#FAFAF8;
+        padding:70px 0;
+    }
+
+    .callout {
+        background:#F3F8F6;
+        padding:30px 30px;
+        border-radius:18px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    img.feature-img {
+        width:100%;
+        border-radius:18px;
+        box-shadow:0 8px 24px rgba(0,0,0,0.14);
+        margin:40px 0;
+    }
+
+    .two-images {
+        display:flex;
+        flex-direction:column;
+        gap:40px;
+    }
+
+    @media (min-width:800px) {
+        .two-images {
+            flex-direction:row;
+        }
+    }
+
+    .two-images img {
+        flex:1;
+        border-radius:18px;
+        box-shadow:0 8px 24px rgba(0,0,0,0.14);
+    }
+
+    .hero {
+        background:#0E4F44;
+        color:white;
+        padding:90px 20px;
+        text-align:center;
+        position:relative;
+        overflow:hidden;
+    }
+
+    .hero h1 {
+        color:white;
+    }
+
+    .hero p {
+        font-size:20px;
+        max-width:760px;
+        margin:0 auto;
+        opacity:0.9;
+    }
+
+    .hero-img {
+        position:absolute;
+        right:40px;
+        bottom:0;
+        width:320px;
+        opacity:0.22;
+    }
+
+    @media (max-width:800px) {
+        .hero-img {
+            display:none;
+        }
+    }
+
+    /* Forest Footer */
+    .footer-forest {
+        background:url('https://static.wixstatic.com/media/7549c3_f931deabeeda465aab6bdaa8465b60a6~mv2.jpg') center/cover;
+        padding:120px 20px;
+        position:relative;
+    }
+
+    .footer-forest:before {
+        content:"";
+        position:absolute;
+        top:0; left:0; right:0; bottom:0;
+        background:rgba(0,0,0,0.45);
+    }
+
+    .footer-forest-content {
+        position:relative;
+        z-index:2;
+        max-width:800px;
+        margin:0 auto;
+        color:white;
+        text-align:center;
+    }
+
+    .footer-forest-content h2 {
+        color:white;
+    }
+
+    .footer-forest-content h2:before {
+        background:#ffffff;
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Headwater Science</h1>
+    <p>Where nature-backed compounds meet performance-focused nutrition.</p>
+    <img class="hero-img"
+         src="https://static.wixstatic.com/media/7549c3_3dbb1a36d7f34a039d4f288e7b53f75c~mv2.png" />
+</div>
+
+<!-- INTRO -->
+<div class="section">
+    <p style="font-size:18px;">
+        Headwater was built on a simple belief: the brain and body perform best when supported consistently — 
+        not shocked into temporary alertness. Instead of caffeine, synthetic stimulants, or artificial energy,
+        we rely on clinically studied mushroom extracts and natural compounds that support the nervous system,
+        cellular health, and mental endurance over time.
+        <br><br>
+        This is nutrition for your brain and body. Not a jolt. Not a crash. Just clarity and resilience.
+    </p>
+</div>
+
+<!-- WHY MUSHROOMS -->
+<div class="light-bg">
+<div class="section">
+    <h2>Why Mushrooms?</h2>
+
+    <p style="font-size:18px;">
+        Functional mushrooms contain bioactive compounds that support:
+    </p>
+
+    <ul style="font-size:18px;">
+        <li>Neural signaling and cognitive pathways</li>
+        <li>Cellular antioxidant defenses</li>
+        <li>Immune function and stress resilience</li>
+        <li>Natural energy and recovery processes</li>
+    </ul>
+
+    <p style="font-size:18px; margin-top:20px;">
+        Headwater uses two of the most studied species:
+    </p>
+
+    <ul style="font-size:18px;">
+        <li><strong>Lion’s Mane</strong> for cognitive support and mental clarity</li>
+        <li><strong>Chaga</strong> for antioxidant capacity and immune support</li>
+    </ul>
+
+    <p style="margin-top:20px; font-size:18px;">
+        These aren’t folklore ingredients. They are nutrient-dense compounds designed by nature 
+        and validated in modern science.
+    </p>
+
+    <img class="feature-img"
+         src="https://static.wixstatic.com/media/7549c3_f931deabeeda465aab6bdaa8465b60a6~mv2.jpg" />
+</div>
+</div>
+
+<!-- DOUBLE IMAGE ROW -->
+<div class="section two-images">
+    <img src="https://static.wixstatic.com/media/7549c3_f931deabeeda465aab6bdaa8465b60a6~mv2.jpg" />
+    <img src="https://static.wixstatic.com/media/7549c3_2d30b7735c5048a6a2c1b5e76b5ad266~mv2.jpg" />
+</div>
+
+<!-- FRUITING BODY EXTRACTS -->
+<div class="section">
+    <h2>Fruiting-Body Extracts Only</h2>
+
+    <div class="callout">
+        <p style="font-size:18px;">
+            Not mycelium.<br>
+            Not grain.<br>
+            No fillers.<br>
+            No shortcuts.
+            <br><br>
+            We use certified organic fruiting-body extracts, which deliver:
+        </p>
+
+        <ul style="font-size:18px;">
+            <li>Higher beta-glucan content</li>
+            <li>More active compounds</li>
+            <li>No starchy fillers</li>
+            <li>Reliable potency and purity</li>
+        </ul>
+
+        <p style="font-size:18px; margin-top:20px;">
+            This ensures every can provides meaningful, consistent functional support —
+            not trace amounts disguised by clever labeling.
         </p>
     </div>
+</div>
 
-    <div style="max-width:900px; margin:60px auto; padding:0 20px;">
+<!-- EXTRACTION -->
+<div class="light-bg">
+<div class="section">
+    <h2>Extraction That Honors Potency</h2>
 
-        <!-- INTRO STATEMENT -->
-        <div style="font-size:18px; margin-bottom:60px; color:#333;">
-            Headwater was built on a simple belief: the brain and body perform best when supported consistently —
-            not shocked into temporary alertness. Instead of caffeine, synthetic stimulants, or artificial energy,
-            we rely on clinically studied mushroom extracts and natural compounds that support the nervous system,
-            cellular health, and mental endurance over time.
+    <p style="font-size:18px;">
+        We don't sprinkle raw mushroom powder — we use extracted concentrates for bioavailable compounds 
+        your body can actually absorb.
+        <br><br>
+        Our extracts are:
+    </p>
+
+    <ul style="font-size:18px;">
+        <li>Hot-water extracted for beta-glucans</li>
+        <li>Verified for purity</li>
+        <li>Third-party tested</li>
+        <li>Optimized for daily use and long-term benefits</li>
+    </ul>
+
+    <p style="margin-top:20px; font-size:18px;">
+        The goal isn’t buzz — it’s nourishment.
+    </p>
+</div>
+</div>
+
+<!-- INGREDIENT INTEGRITY -->
+<div class="section">
+    <h2>Ingredient Integrity</h2>
+
+    <p style="font-size:18px;">
+        Every ingredient in Headwater has a purpose. Nothing artificial. No shortcuts.
+    </p>
+
+    <h3 style="margin-top:30px;">What we never include:</h3>
+    <ul style="font-size:18px;">
+        <li>Caffeine or stimulants</li>
+        <li>Artificial sweeteners</li>
+        <li>Chemical preservatives</li>
+        <li>Synthetic additives</li>
+        <li>Mycelium-on-grain fillers</li>
+    </ul>
+
+    <h3 style="margin-top:30px;">What we do include:</h3>
+    <ul style="font-size:18px;">
+        <li>Certified-organic Lion’s Mane</li>
+        <li>Wild-foraged Chaga</li>
+        <li>L-Theanine for calm clarity</li>
+        <li>Vitamin C for antioxidant synergy</li>
+        <li>Natural fruit essences</li>
+        <li>Light organic agave</li>
+    </ul>
+</div>
+
+<!-- ATHLETES SECTION WITH FOREST FOOTER -->
+<div class="footer-forest">
+    <div class="footer-forest-content">
+        <h2>Built for Athletes. Designed for Everyone.</h2>
+
+        <p style="font-size:20px; margin-top:20px; max-width:700px; margin-left:auto; margin-right:auto;">
+            Professional competitors trust Headwater for mental sharpness, recovery support, nervous-system balance,
+            and daily clarity — without overstimulation.
             <br><br>
-            This is nutrition for your brain and body. Not a jolt. Not a crash. Just clarity and resilience.
-        </div>
-
-        <!-- IMAGE + CAPTION -->
-        <div style="text-align:center; margin-bottom:60px;">
-            <img src="https://static.wixstatic.com/media/7549c3_3dbb1a36d7f34a039d4f288e7b53f75c~mv2.png"
-                 style="width:100%; max-width:420px; border-radius:18px; box-shadow:0 8px 20px rgba(0,0,0,0.12);" />
-        </div>
-
-        <!-- SECTION -->
-        <div style="margin-bottom:80px;">
-            <h2 style="font-size:34px; color:#093028; margin-bottom:20px;">Why Mushrooms?</h2>
-
-            <div style="font-size:18px; color:#444;">
-                Functional mushrooms contain bioactive compounds that support:
-                <ul style="margin-top:15px;">
-                    <li>Neural signaling and cognitive pathways</li>
-                    <li>Cellular antioxidant defenses</li>
-                    <li>Immune function and stress resilience</li>
-                    <li>Natural energy and recovery processes</li>
-                </ul>
-                <br>
-                Headwater uses two of the most studied species:
-                <ul>
-                    <li><strong>Lion’s Mane</strong> for cognitive support and mental clarity</li>
-                    <li><strong>Chaga</strong> for antioxidant capacity and immune support</li>
-                </ul>
-
-                These aren’t folklore ingredients. They are researched, nutrient-dense compounds designed by nature
-                and validated in modern science.
-            </div>
-        </div>
-
-        <!-- IMAGE -->
-        <div style="text-align:center; margin-bottom:60px;">
-            <img src="https://static.wixstatic.com/media/7549c3_f931deabeeda465aab6bdaa8465b60a6~mv2.jpg"
-                 style="width:100%; max-width:650px; border-radius:18px; box-shadow:0 8px 20px rgba(0,0,0,0.12);" />
-        </div>
-
-        <!-- CHAGA IMAGE -->
-        <div style="text-align:center; margin-bottom:60px;">
-            <img src="https://static.wixstatic.com/media/7549c3_2d30b7735c5048a6a2c1b5e76b5ad266~mv2.jpg"
-                 style="width:100%; max-width:650px; border-radius:18px; box-shadow:0 8px 20px rgba(0,0,0,0.12);" />
-        </div>
-
-        <!-- SECTION -->
-        <div style="margin-bottom:80px;">
-            <h2 style="font-size:34px; color:#093028; margin-bottom:20px;">Fruiting-Body Extracts Only</h2>
-
-            <div style="font-size:18px; color:#444;">
-                Not mycelium.<br>
-                Not grain.<br>
-                No fillers.<br>
-                No shortcuts.<br><br>
-
-                We use certified organic fruiting-body extracts, which deliver:
-                <ul style="margin-top:15px;">
-                    <li>Higher beta-glucan content</li>
-                    <li>More active compounds</li>
-                    <li>No starchy fillers</li>
-                    <li>Reliable potency and purity</li>
-                </ul>
-
-                This ensures every can provides meaningful, consistent functional support —
-                not trace amounts disguised by clever labeling.
-            </div>
-        </div>
-
-        <!-- SECTION -->
-        <div style="margin-bottom:80px;">
-            <h2 style="font-size:34px; color:#093028; margin-bottom:20px;">Extraction That Honors Potency</h2>
-
-            <div style="font-size:18px; color:#444;">
-                We don't sprinkle raw mushroom powder; we use extracted concentrates for bioavailable compounds
-                your body can actually absorb.
-                <br><br>
-                Our extracts are:
-                <ul style="margin-top:15px;">
-                    <li>Hot-water extracted for beta-glucans</li>
-                    <li>Verified for purity</li>
-                    <li>Third-party tested</li>
-                    <li>Optimized for daily use and long-term benefits</li>
-                </ul>
-                The goal isn't buzz; it's nourishment.
-            </div>
-        </div>
-
-        <!-- SECTION -->
-        <div style="margin-bottom:80px;">
-            <h2 style="font-size:34px; color:#093028; margin-bottom:20px;">Ingredient Integrity</h2>
-
-            <div style="font-size:18px; color:#444;">
-                Every ingredient in Headwater has a purpose. Nothing extra. Nothing artificial. No shortcuts.
-                <br><br>
-                <strong>What we never include:</strong>
-                <ul style="margin-top:15px;">
-                    <li>Caffeine or stimulants</li>
-                    <li>Artificial sweeteners</li>
-                    <li>Chemical preservatives</li>
-                    <li>Synthetic additives</li>
-                    <li>Mycelium-on-grain fillers</li>
-                </ul>
-                <br>
-                <strong>What we do include:</strong>
-                <ul style="margin-top:15px;">
-                    <li>Certified-organic Lion’s Mane</li>
-                    <li>Wild-foraged Chaga</li>
-                    <li>L-Theanine for calm clarity</li>
-                    <li>Vitamin C for antioxidant synergy</li>
-                    <li>Natural fruit essences</li>
-                    <li>Light organic agave</li>
-                </ul>
-                Designed to drink daily. Engineered to stay clean.
-            </div>
-        </div>
-
-        <!-- SECTION -->
-        <div style="margin-bottom:100px;">
-            <h2 style="font-size:34px; color:#093028; margin-bottom:20px;">Built for Athletes. Designed for Everyone.</h2>
-
-            <div style="font-size:18px; color:#444;">
-                Professional competitors trust Headwater for:
-                <ul style="margin-top:15px;">
-                    <li>Mental sharpness</li>
-                    <li>Recovery support</li>
-                    <li>Nervous-system balance</li>
-                    <li>Daily clarity without overstimulation</li>
-                </ul>
-
-                But it’s not just for elite performers.<br><br>
-                It’s for anyone who wants to think clearly, feel steady, and stay present through life's physical
-                and cognitive demands.
-                <br><br>
-                Training room to living room.<br>
-                Ice rink to office desk.<br>
-                Trailhead to study hall.<br><br>
-                <strong>Performance is personal. Headwater meets you there.</strong>
-            </div>
-        </div>
-
+            But it’s not just for elite performers. It’s for anyone who wants to think clearly, feel steady,
+            and stay present through life's physical and cognitive demands.
+            <br><br>
+            Training room to living room.<br>
+            Ice rink to office desk.<br>
+            Trailhead to study hall.<br><br>
+            <strong>Performance is personal. Headwater meets you there.</strong>
+        </p>
     </div>
 </div>
+
+</body>
+</html>
