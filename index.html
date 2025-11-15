@@ -63,14 +63,22 @@ ul { padding-left: 28px; }
 }
 
 
-/* HERO — OPTION C (aspect-ratio container, perfect containment) ------------ */
+/* HERO — OPTION C + inner scaling container -------------------------------- */
 
 .hero {
   position: relative;
   width: 100%;
-  padding-top: 48%; /* Set to match your hero image aspect ratio */
+  padding-top: 48%; /* Sets aspect ratio of hero image */
   overflow: hidden;
-  background: #000814; /* matches dark edges of hero image */
+  background: #000814;
+}
+
+.hero-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .hero img {
@@ -79,7 +87,7 @@ ul { padding-left: 28px; }
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* ensures full image, NO zoom, NO crop */
+  object-fit: contain; /* FULL image, no crop, no zoom */
 }
 
 .hero-overlay {
@@ -114,6 +122,36 @@ ul { padding-left: 28px; }
   color: #FFFFFF !important;
   opacity: 0.97;
   text-shadow: 0px 3px 14px rgba(0,0,0,0.55);
+}
+
+/* HERO TEXT SCALING WITH IMAGE --------------------------------------------- */
+
+@media (max-width: 1500px) {
+  .hero-content {
+    transform: translateY(-50%) scale(0.90);
+    transform-origin: right center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-content {
+    transform: translateY(-50%) scale(0.80);
+    right: 4%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    transform: translateY(-50%) scale(0.72);
+    right: 3%;
+  }
+}
+
+@media (max-width: 750px) {
+  .hero-content {
+    transform: translateY(-50%) scale(0.65);
+    right: 2%;
+  }
 }
 
 
@@ -191,19 +229,24 @@ ul { padding-left: 28px; }
 </style>
 </head>
 
+
+
 <body>
 
 <!-- HERO ------------------------------------------------------------------- -->
 <div class="hero">
-  <img src="https://static.wixstatic.com/media/7549c3_2ccbd9659efa468f8ce4c083ba847c0b~mv2.png" alt="Headwater Hero Image">
-  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <img src="https://static.wixstatic.com/media/7549c3_2ccbd9659efa468f8ce4c083ba847c0b~mv2.png" alt="Headwater Hero Image">
+    <div class="hero-overlay"></div>
 
-  <div class="hero-content">
-    <h1>Headwater<br>Science</h1>
-    <p>Where nature’s intelligence meets performance-focused nutrition — clarity, balance, and long-term cognitive support without stimulants.</p>
+    <div class="hero-content">
+      <h1>Headwater<br>Science</h1>
+      <p>Where nature’s intelligence meets performance-focused nutrition — clarity, balance, and long-term cognitive support without stimulants.</p>
+    </div>
   </div>
 </div>
 <!-- HERO ------------------------------------------------------------------- -->
+
 
 
 <!-- INTRO ------------------------------------------------------------------ -->
@@ -221,7 +264,8 @@ ul { padding-left: 28px; }
 </div>
 
 
-<!-- WHY MUSHROOMS --------------------------------------------------------- -->
+
+<!-- WHY MUSHROOMS ---------------------------------------------------------- -->
 
 <div class="alt-section">
   <div class="section">
@@ -249,12 +293,14 @@ ul { padding-left: 28px; }
 </div>
 
 
+
 <!-- MUSHROOM IMAGES -------------------------------------------------------- -->
 
 <div class="section two-col">
   <img src="https://static.wixstatic.com/media/7549c3_f931deabeeda465aab6bdaa8465b60a6~mv2.jpg" alt="Lion's Mane Mushroom">
   <img src="https://static.wixstatic.com/media/7549c3_2d30b7735c5048a6a2c1b5e76b5ad266~mv2.jpg" alt="Chaga Mushroom">
 </div>
+
 
 
 <!-- FRUITING BODY ---------------------------------------------------------- -->
@@ -279,6 +325,7 @@ ul { padding-left: 28px; }
 </div>
 
 
+
 <!-- EXTRACTION SECTION ----------------------------------------------------- -->
 
 <div class="alt-section">
@@ -301,6 +348,7 @@ ul { padding-left: 28px; }
          alt="Scientific Extraction">
   </div>
 </div>
+
 
 
 <!-- INGREDIENT INTEGRITY --------------------------------------------------- -->
@@ -332,6 +380,7 @@ ul { padding-left: 28px; }
     <li>Light organic agave</li>
   </ul>
 </div>
+
 
 
 <!-- FOOTER ----------------------------------------------------------------- -->
