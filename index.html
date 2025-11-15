@@ -9,9 +9,9 @@
 
 <style>
 
-/* RESET & BODY -------------------------------------------------------- */
+/* GLOBAL -------------------------------------------------------- */
 
-html, body {
+body {
   margin: 0;
   padding: 0;
   background: #F5F5EF;
@@ -19,11 +19,7 @@ html, body {
   color: #0A2A18;
   line-height: 1.7;
   overflow-x: hidden;
-  width: 100vw;
-  min-width: 100%;
 }
-
-/* TYPOGRAPHY ---------------------------------------------------------- */
 
 h1, h2, h3 {
   margin: 0 0 16px;
@@ -40,39 +36,40 @@ p, li {
   margin-bottom: 18px;
 }
 
-/* HERO SECTION -------------------------------------------------------- */
+/* HERO -------------------------------------------------------- */
 
 .hero {
   position: relative;
-  width: 100vw;
-  min-width: 100%;
+  width: 100%;
+  height: 80vh;
   overflow: hidden;
 }
 
-.hero-bg {
-  position: relative;
+.hero img {
+  position: absolute;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 32%;
   z-index: 1;
-  display: block;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
+  background: linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0));
   z-index: 2;
 }
 
 .hero-content {
   position: absolute;
-  right: 6%;
   top: 50%;
+  right: 6%;
   transform: translateY(-50%);
-  text-align: left;
   max-width: 420px;
   color: #ffffff;
   z-index: 3;
+  text-align: left;
 }
 
 .hero-content h1 {
@@ -83,20 +80,20 @@ p, li {
 
 .hero-content h2 {
   font-size: 42px;
-  color: white;
   margin-top: -10px;
   margin-bottom: 20px;
+  color: white;
   text-shadow: 0px 4px 16px rgba(0,0,0,0.55);
 }
 
 .hero-content p {
   font-size: 20px;
-  color: white;
   opacity: 0.95;
+  color: white;
   text-shadow: 0px 3px 14px rgba(0,0,0,0.55);
 }
 
-/* SECTION WRAPPERS -------------------------------------------------------- */
+/* SECTIONS -------------------------------------------------------- */
 
 .section {
   max-width: 1280px;
@@ -106,7 +103,7 @@ p, li {
 
 .alt-section {
   width: 100%;
-  background: #ffffff;
+  background: #FFFFFF;
   padding: 90px 0;
 }
 
@@ -118,18 +115,16 @@ p, li {
   margin: 24px 0 40px;
 }
 
-/* CARDS -------------------------------------------------------------- */
-
-.card {
-  background: #FFFFFF;
-  border-radius: 24px;
-  padding: 60px;
-  max-width: 1200px;
+.feature-image {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 22px;
+  display: block;
   margin: 80px auto;
-  box-shadow: 0px 14px 36px rgba(0,0,0,0.12);
+  box-shadow: 0px 12px 34px rgba(0,0,0,0.15);
 }
 
-/* 50/50 TWO COLUMN --------------------------------------------------- */
+/* TWO-COL -------------------------------------------------------- */
 
 .two-col {
   display: flex;
@@ -151,20 +146,33 @@ p, li {
 }
 
 @media (max-width: 900px) {
-  .hero-bg { height: auto; }
+
+  .hero { height: auto; }
+
+  .hero img {
+    height: 60vh;
+    object-position: center 40%;
+  }
+
   .hero-content {
     position: relative;
-    top: auto;
-    right: auto;
     transform: none;
+    right: auto;
+    top: auto;
     padding: 40px 20px;
     max-width: 90%;
   }
-  .two-col { flex-direction: column; }
-  .two-col img, .two-col .text { max-width: 100%; }
+
+  .two-col {
+    flex-direction: column;
+  }
+
+  .two-col img, .two-col .text {
+    max-width: 100%;
+  }
 }
 
-/* FOOTER -------------------------------------------------------------- */
+/* FOOTER -------------------------------------------------------- */
 
 .footer {
   background: #0A2A18;
@@ -175,39 +183,24 @@ p, li {
   margin-top: 120px;
 }
 
-.feature-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- HERO -------------------------------------------------------------- -->
-<section class="hero">
-
-  <img 
-    src="https://static.wixstatic.com/media/7549c3_2ccbd9659efa468f8ce4c083ba847c0b~mv2.png"
-    alt="Headwater Hero"
-    class="hero-bg">
-
+<!-- HERO -------------------------------------------------------- -->
+<div class="hero">
+  <img src="https://static.wixstatic.com/media/7549c3_2ccbd9659efa468f8ce4c083ba847c0b~mv2.png"
+       alt="Headwater Hero">
   <div class="hero-overlay"></div>
-
   <div class="hero-content">
     <h1>Headwater</h1>
     <h2>Science</h2>
-    <p>
-      Where nature’s intelligence meets performance-focused nutrition —
-      clarity, balance, and long-term cognitive support without stimulants.
-    </p>
+    <p>Where nature’s intelligence meets performance-focused nutrition — clarity, balance, and long-term cognitive support without stimulants.</p>
   </div>
-</section>
+</div>
 
-<!-- INTRO -------------------------------------------------------------- -->
+<!-- INTRO -------------------------------------------------------- -->
 
 <div class="section">
   <p>
@@ -221,7 +214,7 @@ p, li {
        alt="Headwater Cans">
 </div>
 
-<!-- (rest of the page stays unchanged — omitted for length but not removed) -->
+<!-- PAGE CONTENT CONTINUES… (unchanged below this point) -->
 
 <div class="footer">
   © Gentleman Forager — Headwater Science
