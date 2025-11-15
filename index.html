@@ -11,7 +11,7 @@
 
 /* RESET & BODY -------------------------------------------------------- */
 
-body {
+html, body {
   margin: 0;
   padding: 0;
   background: #F5F5EF;
@@ -19,6 +19,8 @@ body {
   color: #0A2A18;
   line-height: 1.7;
   overflow-x: hidden;
+  width: 100vw;
+  min-width: 100%;
 }
 
 /* TYPOGRAPHY ---------------------------------------------------------- */
@@ -42,7 +44,8 @@ p, li {
 
 .hero {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  min-width: 100%;
   overflow: hidden;
 }
 
@@ -51,6 +54,7 @@ p, li {
   width: 100%;
   height: auto;
   z-index: 1;
+  display: block;
 }
 
 .hero-overlay {
@@ -169,6 +173,13 @@ p, li {
   padding: 70px 30px;
   font-size: 16px;
   margin-top: 120px;
+}
+
+.feature-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
 }
 
 </style>
