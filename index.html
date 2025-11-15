@@ -41,13 +41,12 @@ body {
   height: 100%;
   object-fit: cover;
 
-  /* ⭐ FIXED: Perfect framing for cans + glass + text */
+  /* Corrected framing */
   object-position: 38% 40%;
-
   z-index: 1;
 }
 
-/* gradient overlay for readability */
+/* gradient overlay */
 .hero::after {
   content: "";
   position: absolute;
@@ -140,7 +139,6 @@ body {
     font-size: 16px;
   }
 
-  /* Reposition for mobile for best framing */
   .hero-bg {
     object-position: 50% 45%;
   }
@@ -159,8 +157,10 @@ body {
 <!-- ================= HERO ================= -->
 
 <section class="hero">
-  <img src="https://static.wixstatic.com/media/7549c3_bfd98be9113a46a7bba3fdbe610c13cf~mv2.png"
-       alt="Headwater Hero" class="hero-bg">
+  <img 
+    src="https://static.wixstatic.com/media/7549c3_bfd98be9113a46a7bba3fdbe610c13cf~mv2.png"
+    alt="Headwater Hero"
+    class="hero-bg">
 
   <div class="hero-overlay">
     <h1>Headwater</h1>
