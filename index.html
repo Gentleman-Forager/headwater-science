@@ -8,12 +8,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-html, body {
-  height: auto !important;
-  min-height: 3200px !important;
-}
 
 /* GLOBAL ------------------------------------------------------------------- */
+
+html, body {
+  height: auto !important;
+  min-height: 3800px !important; /* ensures Wix iframe can expand */
+}
 
 body {
   margin: 0;
@@ -61,24 +62,24 @@ ul { padding-left: 28px; }
   margin: 24px 0 40px;
 }
 
-/* HERO --------------------------------------------------------------------- */
+
+/* HERO — OPTION C (aspect-ratio container, perfect containment) ------------ */
 
 .hero {
   position: relative;
   width: 100%;
-  height: 88vh; /* taller to remove letterboxing */
+  padding-top: 48%; /* Set to match your hero image aspect ratio */
   overflow: hidden;
   background: #000814; /* matches dark edges of hero image */
 }
 
 .hero img {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* full image, no zoom */
-  transform: translate(-50%, -50%);
+  object-fit: contain; /* ensures full image, NO zoom, NO crop */
 }
 
 .hero-overlay {
@@ -115,6 +116,7 @@ ul { padding-left: 28px; }
   text-shadow: 0px 3px 14px rgba(0,0,0,0.55);
 }
 
+
 /* IMAGERY ------------------------------------------------------------------ */
 
 .feature-image {
@@ -135,6 +137,7 @@ ul { padding-left: 28px; }
   box-shadow: 0px 12px 30px rgba(0,0,0,0.18);
 }
 
+
 /* CARDS -------------------------------------------------------------------- */
 
 .card {
@@ -145,6 +148,7 @@ ul { padding-left: 28px; }
   margin: 80px auto;
   box-shadow: 0px 14px 36px rgba(0,0,0,0.12);
 }
+
 
 /* TWO-COLUMN LAYOUT -------------------------------------------------------- */
 
@@ -171,6 +175,7 @@ ul { padding-left: 28px; }
   .two-col { flex-direction: column; }
   .two-col img, .two-col .text { max-width: 100%; }
 }
+
 
 /* FOOTER ------------------------------------------------------------------- */
 
@@ -292,4 +297,48 @@ ul { padding-left: 28px; }
       </ul>
     </div>
 
-    <img src="https://static.wixstatic.com/media/7549c3_f1a6ee5e9bf_
+    <img src="https://static.wixstatic.com/media/7549c3_f1a6ee5e9bfa4015bb545487368cad11~mv2.png"
+         alt="Scientific Extraction">
+  </div>
+</div>
+
+
+<!-- INGREDIENT INTEGRITY --------------------------------------------------- -->
+
+<div class="section card">
+  <h2>Ingredient Integrity</h2>
+  <div class="divider"></div>
+
+  <p>Every ingredient in Headwater has a purpose. Nothing extra. Nothing artificial. No shortcuts.</p>
+
+  <h3>What we *never* include:</h3>
+
+  <ul>
+    <li>Caffeine or stimulants</li>
+    <li>Artificial sweeteners</li>
+    <li>Chemical preservatives</li>
+    <li>Synthetic additives</li>
+    <li>Mycelium-on-grain fillers</li>
+  </ul>
+
+  <h3>What we *do* include:</h3>
+
+  <ul>
+    <li>Certified-organic Lion’s Mane</li>
+    <li>Wild-foraged Chaga</li>
+    <li>L-Theanine for calm clarity</li>
+    <li>Vitamin C for antioxidant synergy</li>
+    <li>Natural fruit essences</li>
+    <li>Light organic agave</li>
+  </ul>
+</div>
+
+
+<!-- FOOTER ----------------------------------------------------------------- -->
+
+<div class="footer">
+  © Gentleman Forager — Headwater Science
+</div>
+
+</body>
+</html>
