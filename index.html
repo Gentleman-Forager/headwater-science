@@ -43,17 +43,13 @@ p, li {
 .hero {
   position: relative;
   width: 100%;
-  height: 80vh;
   overflow: hidden;
 }
 
 .hero-bg {
-  position: absolute;
-  inset: 0;
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
   z-index: 1;
 }
 
@@ -151,8 +147,7 @@ p, li {
 }
 
 @media (max-width: 900px) {
-  .hero { height: auto; }
-  .hero-bg { height: 60vh; }
+  .hero-bg { height: auto; }
   .hero-content {
     position: relative;
     top: auto;
