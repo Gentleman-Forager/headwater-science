@@ -62,17 +62,53 @@ ul { padding-left: 28px; }
 .hero {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 88vh; /* taller to remove letterboxing */
   overflow: hidden;
-  background: #000814; /* deep blue-black to match the edges of your hero image */
+  background: #000814; /* matches dark edges of hero image */
 }
 
 .hero img {
   position: absolute;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* SHOWS FULL IMAGE, NO ZOOM */
-  object-position: center;
+  object-fit: contain; /* full image, no zoom */
+  transform: translate(-50%, -50%);
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.55));
+}
+
+.hero-content {
+  position: absolute;
+  top: 58%;
+  right: 6%;
+  transform: translateY(-50%);
+  text-align: left;
+  max-width: 480px;
+  z-index: 5;
+}
+
+.hero-content h1 {
+  font-size: 58px;
+  margin-bottom: 16px;
+  color: #FFFFFF !important;
+  text-shadow: 0px 4px 16px rgba(0,0,0,0.55);
+}
+
+.hero-content p {
+  font-size: 22px;
+  color: #FFFFFF !important;
+  opacity: 0.97;
+  text-shadow: 0px 3px 14px rgba(0,0,0,0.55);
 }
 
 /* IMAGERY ------------------------------------------------------------------ */
@@ -152,12 +188,14 @@ ul { padding-left: 28px; }
 <div class="hero">
   <img src="https://static.wixstatic.com/media/7549c3_2ccbd9659efa468f8ce4c083ba847c0b~mv2.png" alt="Headwater Hero Image">
   <div class="hero-overlay"></div>
+
   <div class="hero-content">
     <h1>Headwater<br>Science</h1>
     <p>Where nature’s intelligence meets performance-focused nutrition — clarity, balance, and long-term cognitive support without stimulants.</p>
   </div>
 </div>
 <!-- HERO ------------------------------------------------------------------- -->
+
 
 <!-- INTRO ------------------------------------------------------------------ -->
 
@@ -172,6 +210,7 @@ ul { padding-left: 28px; }
        class="feature-image"
        alt="Headwater Cans">
 </div>
+
 
 <!-- WHY MUSHROOMS --------------------------------------------------------- -->
 
@@ -200,14 +239,16 @@ ul { padding-left: 28px; }
   </div>
 </div>
 
-<!-- MUSHROOM IMAGES ------------------------------------------------------- -->
+
+<!-- MUSHROOM IMAGES -------------------------------------------------------- -->
 
 <div class="section two-col">
   <img src="https://static.wixstatic.com/media/7549c3_f931deabeeda465aab6bdaa8465b60a6~mv2.jpg" alt="Lion's Mane Mushroom">
   <img src="https://static.wixstatic.com/media/7549c3_2d30b7735c5048a6a2c1b5e76b5ad266~mv2.jpg" alt="Chaga Mushroom">
 </div>
 
-<!-- FRUITING BODY --------------------------------------------------------- -->
+
+<!-- FRUITING BODY ---------------------------------------------------------- -->
 
 <div class="section card">
   <h2>Fruiting-Body Extracts Only</h2>
@@ -228,7 +269,8 @@ ul { padding-left: 28px; }
   </ul>
 </div>
 
-<!-- EXTRACTION SECTION WITH IMAGE ---------------------------------------- -->
+
+<!-- EXTRACTION SECTION ----------------------------------------------------- -->
 
 <div class="alt-section">
   <div class="section two-col">
@@ -246,46 +288,4 @@ ul { padding-left: 28px; }
       </ul>
     </div>
 
-    <img src="https://static.wixstatic.com/media/7549c3_f1a6ee5e9bfa4015bb545487368cad11~mv2.png"
-         alt="Scientific Extraction">
-  </div>
-</div>
-
-<!-- INGREDIENT INTEGRITY -------------------------------------------------- -->
-
-<div class="section card">
-  <h2>Ingredient Integrity</h2>
-  <div class="divider"></div>
-
-  <p>Every ingredient in Headwater has a purpose. Nothing extra. Nothing artificial. No shortcuts.</p>
-
-  <h3>What we *never* include:</h3>
-
-  <ul>
-    <li>Caffeine or stimulants</li>
-    <li>Artificial sweeteners</li>
-    <li>Chemical preservatives</li>
-    <li>Synthetic additives</li>
-    <li>Mycelium-on-grain fillers</li>
-  </ul>
-
-  <h3>What we *do* include:</h3>
-
-  <ul>
-    <li>Certified-organic Lion’s Mane</li>
-    <li>Wild-foraged Chaga</li>
-    <li>L-Theanine for calm clarity</li>
-    <li>Vitamin C for antioxidant synergy</li>
-    <li>Natural fruit essences</li>
-    <li>Light organic agave</li>
-  </ul>
-</div>
-
-<!-- FOOTER --------------------------------------------------------------- -->
-
-<div class="footer">
-  © Gentleman Forager — Headwater Science
-</div>
-
-</body>
-</html>
+    <img src="https://static.wixstatic.com/media/7549c3_f1a6ee5e9bf_
