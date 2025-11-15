@@ -1,21 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Headwater Science Test</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #F5F5EF; color: #0A2A18; }
-    .hero { height: 50vh; background: #ccc; text-align: center; padding-top: 20vh; }
-    h1 { font-size: 48px; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-    p { font-size: 18px; max-width: 800px; margin: 20px auto; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Headwater Science</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL ------------------------------------------------------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #F5F5EF;
+  font-family: 'Montserrat', sans-serif;
+  color: #0A2A18;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: #0A2A18;
+}
+
+h1 { font-size: 54px; letter-spacing: .4px; }
+h2 { font-size: 38px; }
+h3 { font-size: 26px; }
+
+p, li {
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+ul { padding-left: 28px; }
+
+.section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 90px 40px;
+}
+
+.alt-section {
+  background: #FFFFFF;
+  width: 100%;
+  padding: 90px 0;
+}
+
+.divider {
+  width: 90px;
+  height: 4px;
+  background: #D4C08A;
+  border-radius: 2px;
+  margin: 24px 0 40px;
+}
+
+/* HERO --------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.45));
+  top: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 12%;
+  left: 14%;
+  transform: translateX(0);
+  text-align: left;
+  color: #FFFFFF;
+  max-width: 500px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 56px;
+  margin-bottom: 16px;
+  color: #FFFFFF;
+  text-shadow: 0px 2px 10px rgba(0,0,0,0.55);
+}
+
+.hero-content p {
+  font-size: 22px;
+  opacity: 1;
+  color: #FFFFFF;
+  text-shadow: 0px 2px 10px rgba(0,0,0,0.55);
+}
+
+/* IMAGERY ------------------------------------------------------------------ */
+
+.feature-image {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 22px;
+  display: block;
+  margin: 80px auto;
+  box-shadow: 0px 12px 34px rgba(0,0,0,0.15);
+}
+
+.round-image {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 22px;
+  display: block;
+  margin: 80px auto;
+  box-shadow: 0px 12px 30px rgba(0,0,0,0.18);
+}
+
+/* CARDS -------------------------------------------------------------------- */
+
+.card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 60px 60px;
+  max-width: 1200px;
+  margin: 80px auto;
+  box-shadow: 0px 14px 36px rgba(0,0,0,0.12);
+}
+
+/* TWO-COLUMN LAYOUT -------------------------------------------------------- */
+
+.two-col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: center;
+}
+
+.two-col img {
+  flex: 1 1 48%;
+  max-width: 48%;
+  border-radius: 20px;
+  box-shadow: 0px 12px 30px rgba(0,0,0,0.14);
+}
+
+.two-col .text {
+  flex: 1 1 48%;
+  max-width: 48%;
+}
+
+@media (max-width: 900px) {
+  .two-col { flex-direction: column; }
+  .two-col img, .two-col .text { max-width: 100%; }
+}
+
+/* FOOTER ------------------------------------------------------------------- */
+
+.footer {
+  background: #0A2A18;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 70px 30px;
+  font-size: 16px;
+  margin-top: 120px;
+}
+
+</style>
 </head>
+
 <body>
-  <div class="hero">
+
+<!-- HERO ------------------------------------------------------------------- -->
+
+<div class="hero">
+  <img src="https://static.wixstatic.com/media/7549c3_0d66daa084f54ab6a0a4a03eaaf6fe18~mv2.png" alt="Headwater Hero Cans">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
     <h1>Headwater Science</h1>
-    <p>Where nature’s intelligence meets performance-focused nutrition.</p>
+    <p>Where nature’s intelligence meets performance-focused nutrition — clarity, balance, and long-term cognitive support without stimulants.</p>
   </div>
-  <p>Headwater was built on a simple belief: the brain and body perform best when supported consistently.</p>
+</div>
+
+<!-- INTRO ------------------------------------------------------------------ -->
+
+<div class="section">
+  <p>
+    Headwater was built on a simple belief: the brain and body perform best when supported consistently—not shocked into temporary alertness. Instead of caffeine, synthetic stimulants, or artificial energy, we rely on clinically studied mushroom extracts and natural compounds that support the nervous system, cellular health, and mental endurance over time.
+  </p>
+
+  <p><strong>This is nutrition for your brain and body. Not a jolt. Not a crash. Just clarity and resilience.</strong></p>
+
+  <img src="https://static.wixstatic.com/media/7549c3_3dbb1a36d7f34a039d4f288e7b53f75c~mv2.png"
+       class="feature-image"
+       alt="Headwater Cans">
+</div>
+
+<!-- WHY MUSHROOMS --------------------------------------------------------- -->
+
+<div class="alt-section">
+  <div class="section">
+    <h2>Why Mushrooms?</h2>
+    <div class="divider"></div>
+
+    <p>Functional mushrooms contain bioactive compounds that support:</p>
+
+    <ul>
+      <li>Neural signaling and cognitive pathways</li>
+      <li>Cellular antioxidant defenses</li>
+      <li>Immune function and stress resilience</li>
+      <li>Natural energy and recovery processes</li>
+    </ul>
+
+    <p><strong>Headwater uses two of the most studied species:</strong></p>
+
+    <ul>
+      <li><strong>Lion’s Mane</strong> for cognitive support and mental clarity</li>
+      <li><strong>Chaga</strong> for antioxidant capacity and immune support</li>
+    </ul>
+
+    <p>These aren’t folklore ingredients. They are researched, nutrient-dense compounds designed by nature and validated in modern science.</p>
+  </div>
+</div>
+
+<!-- MUSHROOM IMAGES ------------------------------------------------------- -->
+
+<div class="section two-col">
+  <img src="https://static.wixstatic.com/media/7549c3_f931deabeeda465aab6bdaa8465b60a6~mv2.jpg" alt="Lion's Mane Mushroom">
+  <img src="https://static.wixstatic.com/media/7549c3_2d30b7735c5048a6a2c1b5e76b5ad266~mv2.jpg" alt="Chaga Mushroom">
+</div>
+
+<!-- FRUITING BODY --------------------------------------------------------- -->
+
+<div class="section card">
+  <h2>Fruiting-Body Extracts Only</h2>
+  <div class="divider"></div>
+
+  <p>Not mycelium.<br>
+     Not grain.<br>
+     No fillers.<br>
+     No shortcuts.</p>
+
+  <p>We use certified organic fruiting-body extracts, which deliver:</p>
+
+  <ul>
+    <li>Higher beta-glucan content</li>
+    <li>More active compounds</li>
+    <li>No starchy fillers</li>
+    <li>Reliable potency and purity</li>
+  </ul>
+</div>
+
+<!-- EXTRACTION SECTION WITH IMAGE ---------------------------------------- -->
+
+<div class="alt-section">
+  <div class="section two-col">
+    <div class="text">
+      <h2>Extraction That Honors Potency</h2>
+      <div class="divider"></div>
+
+      <p>We don’t sprinkle raw mushroom powder; we use extracted concentrates for bioavailable compounds your body can use.</p>
+
+      <ul>
+        <li>Hot-water extracted for beta-glucans</li>
+        <li>Verified for purity</li>
+        <li>Third-party tested</li>
+        <li>Optimized for daily use and long-term benefits</li>
+      </ul>
+    </div>
+
+    <img src="https://static.wixstatic.com/media/7549c3_f1a6ee5e9bfa4015bb545487368cad11~mv2.png"
+         alt="Scientific Extraction">
+  </div>
+</div>
+
+<!-- INGREDIENT INTEGRITY -------------------------------------------------- -->
+
+<div class="section card">
+  <h2>Ingredient Integrity</h2>
+  <div class="divider"></div>
+
+  <p>Every ingredient in Headwater has a purpose. Nothing extra. Nothing artificial. No shortcuts.</p>
+
+  <h3>What we *never* include:</h3>
+
+  <ul>
+    <li>Caffeine or stimulants</li>
+    <li>Artificial sweeteners</li>
+    <li>Chemical preservatives</li>
+    <li>Synthetic additives</li>
+    <li>Mycelium-on-grain fillers</li>
+  </ul>
+
+  <h3>What we *do* include:</h3>
+
+  <ul>
+    <li>Certified-organic Lion’s Mane</li>
+    <li>Wild-foraged Chaga</li>
+    <li>L-Theanine for calm clarity</li>
+    <li>Vitamin C for antioxidant synergy</li>
+    <li>Natural fruit essences</li>
+    <li>Light organic agave</li>
+  </ul>
+</div>
+
+<!-- FOOTER --------------------------------------------------------------- -->
+
+<div class="footer">
+  © Gentleman Forager — Headwater Science
+</div>
+
 </body>
 </html>
