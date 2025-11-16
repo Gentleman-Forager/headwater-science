@@ -9,7 +9,20 @@
 
 <style>
 
-/* GLOBAL ------------------------------------------------------------------- */
+/* ---- OVERRIDE WIX EMBED CONTAINER LIMITS ---- */
+:host, html, body, .html-widget, .embed-container, .spps-iframe-wrapper {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* ---- PAGE-WRAP (STABILIZES HERO WIDTH) ---- */
+.page-wrap {
+    width: 100%;
+    max-width: 1400px;   /* prevents hero from overshooting on large screens */
+    margin: 0 auto;
+}
+
+/* ---- GLOBAL ---- */
 
 body {
   margin: 0;
@@ -20,10 +33,11 @@ body {
   line-height: 1.7;
 }
 
+/* Typography */
+
 h1, h2, h3 {
   font-weight: 700;
   margin: 0 0 16px;
-  color: #0A2A18;
 }
 
 h1 { font-size: 54px; letter-spacing: .4px; }
@@ -35,34 +49,18 @@ p, li {
   margin-bottom: 18px;
 }
 
-ul { padding-left: 28px; }
-
 .section {
   max-width: 1280px;
   margin: 0 auto;
   padding: 90px 40px;
 }
 
-.alt-section {
-  background: #FFFFFF;
-  width: 100%;
-  padding: 90px 0;
-}
-
-.divider {
-  width: 90px;
-  height: 4px;
-  background: #D4C08A;
-  border-radius: 2px;
-  margin: 24px 0 40px;
-}
-
-/* HERO --------------------------------------------------------------------- */
+/* ---- HERO ---- */
 
 .hero {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero img {
@@ -78,35 +76,32 @@ ul { padding-left: 28px; }
   inset: 0;
   background: linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0));
   pointer-events: none;
-  z-index: 2;
 }
 
 .hero-content {
   position: absolute;
-  top: 48%;
+  top: 50%;
   right: 6%;
   transform: translateY(-50%);
-  max-width: 420px;
   text-align: left;
+  max-width: 420px;
   color: #ffffff;
-  z-index: 3;
+  z-index: 5;
 }
 
 .hero-content h1 {
   font-size: 56px;
-  color: #ffffff;
-  margin: 0 0 12px;
-  line-height: 1;
+  color: white;
   text-shadow: 0px 4px 16px rgba(0,0,0,0.55);
 }
 
 .hero-content p {
   font-size: 20px;
-  opacity: 0.98;
+  opacity: 0.95;
   text-shadow: 0px 3px 14px rgba(0,0,0,0.55);
 }
 
-/* IMAGES ------------------------------------------------------------------ */
+/* ---- IMAGERY ---- */
 
 .feature-image {
   width: 100%;
@@ -117,58 +112,7 @@ ul { padding-left: 28px; }
   box-shadow: 0px 12px 34px rgba(0,0,0,0.15);
 }
 
-.round-image {
-  width: 100%;
-  max-width: 900px;
-  border-radius: 22px;
-  display: block;
-  margin: 80px auto;
-  box-shadow: 0px 12px 30px rgba(0,0,0,0.18);
-}
-
-/* CARDS -------------------------------------------------------------------- */
-
-.card {
-  background: #FFFFFF;
-  border-radius: 24px;
-  padding: 60px 60px;
-  max-width: 1200px;
-  margin: 80px auto;
-  box-shadow: 0px 14px 36px rgba(0,0,0,0.12);
-}
-
-/* TWO-COLUMN IMAGE/TEXT LAYOUT -------------------------------------------- */
-
-.two-col {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-  align-items: center;
-}
-
-.two-col img {
-  flex: 1 1 48%;
-  max-width: 48%;
-  border-radius: 20px;
-  box-shadow: 0px 12px 30px rgba(0,0,0,0.14);
-}
-
-.two-col .text {
-  flex: 1 1 48%;
-  max-width: 48%;
-}
-
-@media (max-width: 900px) {
-  .two-col { flex-direction: column; }
-  .two-col img, .two-col .text { max-width: 100%; }
-  .hero-content {
-    position: absolute;
-    right: 4%;
-    top: 46%;
-  }
-}
-
-/* FOOTER ------------------------------------------------------------------- */
+/* ---- FOOTER ---- */
 
 .footer {
   background: #0A2A18;
@@ -184,55 +128,42 @@ ul { padding-left: 28px; }
 
 <body>
 
-<!-- HERO ------------------------------------------------------------------- -->
-<div class="hero">
-  <img src="https://static.wixstatic.com/media/7549c3_2ccbd9659efa468f8ce4c083ba847c0b~mv2.png" alt="Headwater Hero Image">
-  <div class="hero-overlay"></div>
+<div class="page-wrap">
 
+<!-- HERO -->
+<div class="hero">
+  <img src="https://static.wixstatic.com/media/7549c3_2ccbd9659efa468f8ce4c083ba847c0b~mv2.png" alt="Headwater Hero">
+  <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>Headwater<br>Science</h1>
     <p>Where nature’s intelligence meets performance-focused nutrition — clarity, balance, and long-term cognitive support without stimulants.</p>
   </div>
 </div>
 
-<!-- INTRO ------------------------------------------------------------------ -->
+</div> <!-- END PAGE-WRAP -->
+
+<!-- REST OF PAGE CONTENT -->
 <div class="section">
   <p>
-    Headwater was built on a simple belief: the brain and body perform best when supported consistently—not shocked into temporary alertness. Instead of caffeine, synthetic stimulants, or artificial energy, we rely on clinically studied mushroom extracts and natural compounds that support the nervous system, cellular health, and mental endurance over time.
+    Headwater was built on a simple belief: the brain and body perform best when supported consistently—not shocked into temporary alertness...
   </p>
+  <p><strong>This is nutrition for your brain and body. Not a jolt...</strong></p>
 
-  <p><strong>This is nutrition for your brain and body. Not a jolt. Not a crash. Just clarity and resilience.</strong></p>
-
-  <img src="https://static.wixstatic.com/media/7549c3_3dbb1a36d7f34a039d4f288e7b53f75c~mv2.png"
-       class="feature-image"
-       alt="Headwater Cans">
+  <img src="https://static.wixstatic.com/media/7549c3_3dbb1a36d7f34a039d4f288e7b53f75c~mv2.png" class="feature-image" alt="Headwater Cans">
 </div>
 
-<!-- WHY MUSHROOMS --------------------------------------------------------- -->
 <div class="alt-section">
   <div class="section">
     <h2>Why Mushrooms?</h2>
-    <div class="divider"></div>
-
     <p>Functional mushrooms contain bioactive compounds that support:</p>
-
     <ul>
       <li>Neural signaling and cognitive pathways</li>
       <li>Cellular antioxidant defenses</li>
       <li>Immune function and stress resilience</li>
-      <li>Natural energy and recovery processes</li>
-    </ul>
-
-    <p><strong>Headwater uses two of the most studied species:</strong></p>
-
-    <ul>
-      <li><strong>Lion’s Mane</strong> for cognitive support and mental clarity</li>
-      <li><strong>Chaga</strong> for antioxidant capacity and immune support</li>
     </ul>
   </div>
 </div>
 
-<!-- FOOTER --------------------------------------------------------------- -->
 <div class="footer">
   © Gentleman Forager — Headwater Science
 </div>
