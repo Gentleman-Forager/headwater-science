@@ -9,7 +9,7 @@
 
 <style>
 
-/* GLOBAL -------------------------------------------------------------- */
+/* GLOBAL ------------------------------------------------------------------- */
 
 body {
   margin: 0;
@@ -18,14 +18,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #0A2A18;
   line-height: 1.7;
-  overflow: visible !important;   /* FIX: allow page to expand */
 }
-
-html {
-  overflow: visible !important;   /* FIX: prevent iFrame cutoff */
-}
-
-/* HEADINGS ------------------------------------------------------------ */
 
 h1, h2, h3 {
   font-weight: 700;
@@ -44,18 +37,10 @@ p, li {
 
 ul { padding-left: 28px; }
 
-/* LAYOUT -------------------------------------------------------------- */
-
 .section {
   max-width: 1280px;
   margin: 0 auto;
   padding: 90px 40px;
-}
-
-.alt-section {
-  background: #FFFFFF;
-  width: 100%;
-  padding: 90px 0;
 }
 
 .divider {
@@ -66,18 +51,21 @@ ul { padding-left: 28px; }
   margin: 24px 0 40px;
 }
 
-/* HERO -------------------------------------------------------------- */
+/* HERO --------------------------------------------------------------------- */
 
+/* Force correct width even inside Wix iFrame */
 .hero {
+  width: 1400px !important;     /* ensures hero stays full-width */
+  max-width: 100% !important;   /* still responsive */
+  margin: 0 auto;
   position: relative;
-  width: 100%;
-  overflow: visible; /* FIX: do not crop hero or following content */
+  overflow: visible !important; /* prevent clipping */
 }
 
 .hero img {
   display: block;
   width: 100%;
-  height: auto;       /* FIX: natural proportional scaling */
+  height: auto;
   object-fit: cover;
   object-position: center top;
 }
@@ -96,6 +84,7 @@ ul { padding-left: 28px; }
   transform: translateY(-50%);
   text-align: left;
   max-width: 420px;
+  min-width: 420px !important;  /* Prevent Wix from collapsing text */
   color: #ffffff;
   z-index: 5;
 }
@@ -113,7 +102,7 @@ ul { padding-left: 28px; }
   text-shadow: 0px 3px 14px rgba(0,0,0,0.55);
 }
 
-/* IMAGES ------------------------------------------------------------- */
+/* IMAGES ------------------------------------------------------------------ */
 
 .feature-image {
   width: 100%;
@@ -133,44 +122,7 @@ ul { padding-left: 28px; }
   box-shadow: 0px 12px 30px rgba(0,0,0,0.18);
 }
 
-/* CARDS -------------------------------------------------------------- */
-
-.card {
-  background: #FFFFFF;
-  border-radius: 24px;
-  padding: 60px 60px;
-  max-width: 1200px;
-  margin: 80px auto;
-  box-shadow: 0px 14px 36px rgba(0,0,0,0.12);
-}
-
-/* TWO-COLUMN --------------------------------------------------------- */
-
-.two-col {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 60px;
-  align-items: center;
-}
-
-.two-col img {
-  flex: 1 1 48%;
-  max-width: 48%;
-  border-radius: 20px;
-  box-shadow: 0px 12px 30px rgba(0,0,0,0.14);
-}
-
-.two-col .text {
-  flex: 1 1 48%;
-  max-width: 48%;
-}
-
-@media (max-width: 900px) {
-  .two-col { flex-direction: column; }
-  .two-col img, .two-col .text { max-width: 100%; }
-}
-
-/* FOOTER ------------------------------------------------------------- */
+/* FOOTER ------------------------------------------------------------------- */
 
 .footer {
   background: #0A2A18;
@@ -186,20 +138,25 @@ ul { padding-left: 28px; }
 
 <body>
 
-<!-- HERO -------------------------------------------------------------- -->
+<!-- HERO ------------------------------------------------------------------- -->
 <div class="hero">
   <img src="https://static.wixstatic.com/media/7549c3_2ccbd9659efa468f8ce4c083ba847c0b~mv2.png" alt="Headwater Hero Image">
   <div class="hero-overlay"></div>
+
   <div class="hero-content">
     <h1>Headwater<br>Science</h1>
     <p>Where nature’s intelligence meets performance-focused nutrition — clarity, balance, and long-term cognitive support without stimulants.</p>
   </div>
 </div>
+<!-- END HERO --------------------------------------------------------------- -->
 
-<!-- INTRO ------------------------------------------------------------- -->
+
+<!-- INTRO ------------------------------------------------------------------ -->
 <div class="section">
   <p>
-    Headwater was built on a simple belief: the brain and body perform best when supported consistently—not shocked into temporary alertness. Instead of caffeine, synthetic stimulants, or artificial energy, we rely on clinically studied mushroom extracts and natural compounds that support the nervous system, cellular health, and mental endurance over time.
+    Headwater was built on a simple belief: the brain and body perform best when supported consistently—not shocked into temporary alertness. Instead of caffeine,
+    synthetic stimulants, or artificial energy, we rely on clinically studied mushroom extracts and natural compounds that support the nervous system, cellular health,
+    and mental endurance over time.
   </p>
 
   <p><strong>This is nutrition for your brain and body. Not a jolt. Not a crash. Just clarity and resilience.</strong></p>
@@ -209,31 +166,31 @@ ul { padding-left: 28px; }
        alt="Headwater Cans">
 </div>
 
-<!-- WHY MUSHROOMS ----------------------------------------------------- -->
-<div class="alt-section">
-  <div class="section">
-    <h2>Why Mushrooms?</h2>
-    <div class="divider"></div>
 
-    <p>Functional mushrooms contain bioactive compounds that support:</p>
+<!-- WHY MUSHROOMS --------------------------------------------------------- -->
+<div class="section">
+  <h2>Why Mushrooms?</h2>
+  <div class="divider"></div>
 
-    <ul>
-      <li>Neural signaling and cognitive pathways</li>
-      <li>Cellular antioxidant defenses</li>
-      <li>Immune function and stress resilience</li>
-      <li>Natural energy and recovery processes</li>
-    </ul>
+  <p>Functional mushrooms contain bioactive compounds that support:</p>
 
-    <p><strong>Headwater uses two of the most studied species:</strong></p>
+  <ul>
+    <li>Neural signaling and cognitive pathways</li>
+    <li>Cellular antioxidant defenses</li>
+    <li>Immune function and stress resilience</li>
+    <li>Natural energy and recovery processes</li>
+  </ul>
 
-    <ul>
-      <li><strong>Lion’s Mane</strong> for cognitive support and mental clarity</li>
-      <li><strong>Chaga</strong> for antioxidant capacity and immune support</li>
-    </ul>
-  </div>
+  <p><strong>Headwater uses two of the most studied species:</strong></p>
+
+  <ul>
+    <li><strong>Lion’s Mane</strong> for cognitive support and mental clarity</li>
+    <li><strong>Chaga</strong> for antioxidant capacity and immune support</li>
+  </ul>
 </div>
 
-<!-- FOOTER ------------------------------------------------------------ -->
+
+<!-- FOOTER --------------------------------------------------------------- -->
 <div class="footer">
   © Gentleman Forager — Headwater Science
 </div>
